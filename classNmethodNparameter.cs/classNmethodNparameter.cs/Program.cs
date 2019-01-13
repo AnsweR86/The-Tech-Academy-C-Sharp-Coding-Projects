@@ -1,31 +1,35 @@
 ﻿using System;
 
+
 namespace MethodDrill2
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {   ///Integer
-            Calculator calc = new Calculator();
-            int result = 0;
-            result = calc.Multiplication(12, 10);
-            Console.WriteLine(result);
-            Console.ReadLine();
-
-            ///Decimal
-            Calculator calc2 = new Calculator();
-            int result2 = 0;
-            result2 = calc2.Subtraction(15, 2.2);
-            Console.WriteLine(result2);
-            Console.ReadLine();
-
-            /// and STRING
-            Calculator calc3 = new Calculator();
-            int result3 = 0;
-            result3 = calc3.Addition("15", "5");
-            Console.WriteLine(result3);
-            Console.ReadLine();
-
-        }
-    }
-}
+        {
+            class Program
+            {
+                public static void Main(string[] args)
+                {
+                    //ARGUMENTS THATS GOING TO PASSED FROM MAIN TO CLASS
+                    Console.WriteLine("Please enter an integer.");
+                        int x = Convert.ToInt32(Console.ReadLine());
+        
+                    Console.WriteLine("Please enter a second integer (it is not necessary).");
+                        int y = 0;
+                     try
+                        {
+                            y = Convert.ToInt32(Console.ReadLine());
+                        }
+                    catch
+                        {
+                        Console.WriteLine("Nothing was entered for second integer");
+                     }
+        
+        
+                           Example add = new Example();
+                           add.AddNumbers(x, new int[] { y });
+        
+                           Console.ReadLine();
+                          
+        
+                    }
+                }
+            } 
+};

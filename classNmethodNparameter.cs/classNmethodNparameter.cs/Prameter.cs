@@ -1,39 +1,43 @@
-﻿using System;
+﻿
 
-
-namespace MethodDrill2
-
-{
-    public class Calculator
+    using System;
+    
+        namespace MethodDrill2
+    
     {
-        public Calculator()
+        public class Calculator
         {
-
-        }
-
-        public int Multiplication (int num1, int num2)
-        {
-            return num1 * num2;
-        }
-
-        public int Subtraction(double num1, double num2)
-        {
-            return Convert.ToInt32(num1 - num2);
-        }
-
-        public int Addition(string one, string two)
-        {
-            int ex = 0;
-            int why = 0;
-            if (!Int32.TryParse(one, out ex))
+            public Calculator()
             {
-                ex= -1;
+                // public Multiplication (int num1, int num2)
+                //(num1 * num2);
             }
-            if (!Int32.TryParse(two, out why))
+            //  
+            // public int Subtraction(double num1, double num2)
+            //{
+            //return Convert.ToInt32(num1 - num2);
+            //}
+            //
+            public void AddNumbers(int a, [Optional] int[] b)
             {
-                why= -1;
+                int total = a + 10;
+    
+                if (b != null)
+                {
+                    foreach (int i in b)
+                    {
+    
+                        total += 1;
+                    }
+                }//GIVING THE METHOD A WAY TO PRINTTO SCREEN
+                    Console.WriteLine("10+interger One +intergen two");
+                Console.WriteLine(total);
             }
-            return ex + why;
+    
         }
+    
     }
-}
+        
+            
+
+    
