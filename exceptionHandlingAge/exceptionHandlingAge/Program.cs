@@ -1,52 +1,45 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exceptionHandlingAge
-
+namespace ExceptionHandlingDrill2
 {
-    internal class Program
+    public class Program 
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            
+            
+
+            try
             {
                 bool validAnswer = false;
                 int age = 0;
-                try
+                while (!validAnswer)
                 {
-                    while (!validAnswer && age <= 0)
-                    {
-
-                        Console.WriteLine("Please enter your age.");
-                        validAnswer = int.TryParse(Console.ReadLine(), out age);
-
-                        if (!validAnswer) Console.WriteLine("Please enter whole numbers only.");
-                        {
-                            if (age <= 0)
-                                throw new InvalidOperationException();
-                        }
-                        Console.WriteLine("You Can Not be Younger than 0 years old");
-                        Console.ReadLine();
-                    }
-                }
-
-                catch (FormatException)
-                {
-                    Console.WriteLine("Error, you are not following directions.");
-                    Console.ReadLine();
+                    Console.WriteLine("Please enter your age.");
+                    validAnswer = int.TryParse(Console.ReadLine(), out age);
+                    if (!validAnswer) Console.WriteLine("Please enter digits only, no decimals.");
 
                 }
-                catch (InvalidOperationException)
+                if (age <= 0)
                 {
-                    Console.WriteLine("Please enter your age in whole digits.");
-                    Console.ReadLine();
+                    throw new Exception();
                 }
-
-
+                Console.WriteLine("You were born in the year " + (DateTime.Today.Year - age));
             }
+            catch (Exception)
+            {
+                Console.WriteLine("An error occurred, please contact your System Administrator.");
+                
+            }
+            
+
+            Console.ReadLine();
+
+
         }
     }
 }
-
