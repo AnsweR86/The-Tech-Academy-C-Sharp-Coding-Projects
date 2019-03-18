@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OverloadingOperator_App
+namespace interfaceDrill
 {
-    
+    //Use polymorphism to create an object //
+    //type IQuittable and call the Quit() method on it//
     interface IQuittable
     {
         void Quit();

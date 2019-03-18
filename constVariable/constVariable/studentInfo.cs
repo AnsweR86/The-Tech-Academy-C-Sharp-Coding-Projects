@@ -2,18 +2,20 @@
 
 namespace constVariable
 {
-    public class Student
-    {
-        public Student() : this("", "")
-        {
-        }
+     class Student
+    { //1.CREATING A CONST VARIABLE
+        public Student(string name) : this("name", "city") { }
 
-        public Student(string name, string city)
-        {//1.CREATING A CONST VARIABLE
-            const string studentName = "jino Chang";
-            //2.CREATING A VARIAIBLE USING "VAR"
-            var City = "Seattle";
-            Console.WriteLine("Student name = {0}, City = {1}", studentName, City);
+        public Student(string name,string city)
+        {
+            name = name;
+            city = city;
         }
+        public string name { get; set; }
+        public string city { get; set; }
+
+        
+       
+      
     }
 }

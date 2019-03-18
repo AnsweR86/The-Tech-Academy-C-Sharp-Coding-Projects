@@ -5,18 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace OverloadingOperator_App
+namespace interfaceDrill
 {
-    public class Program
+   class Program : Employee
     {
         static void Main(string[] args)
-        {
-            Employee emp1 = new Employee { id = 123 };
-            Employee emp2 = new Employee { id = 123 };
-
-            bool compare = emp1 != emp2;
-            Console.WriteLine("Are the two ids equal?" + compare);
+        {////  //INTERFACE IQuittable//
+            IQuittable quitExecute = new Employee();
+            quitExecute.Quit();
             Console.ReadLine();
+
         }
     }
 

@@ -4,38 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    namespace OverloadingOperator_App
+    namespace interfaceDrill
 {
-
-    class Employee
+    /////interface and implement the Quit() method //
+    class Employee : IQuittable
     {
-        public int id { get; set; }
-        public static bool operator ==(Employee e1, Employee e2)
+        void IQuittable.Quit()
         {
-            if (e1.id == e2.id)
-            {
-                return true;
-            }
-            else
-                return false;
-        }
-        public static bool operator !=(Employee e1, Employee e2)
-        {
-            if (e1.id != e2.id)
-            {
-                return true;
-            }
-            else return false;
-
-        }
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj); Equals(obj);
-
-        }
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
+            Console.WriteLine("you have quit the game");
+        
         }
 
     }
