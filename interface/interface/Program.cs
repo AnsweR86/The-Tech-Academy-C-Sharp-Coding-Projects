@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Interface
 {
-    class Employee : Person, IQuittable
-
+    class Program
     {
-        public override void SayName()
+        static void Main(string[] args)
         {
-            Console.WriteLine($"Name: [{FirstName} {LastName}]");
-        }
-
-        public void Quit()
-        {
-            Console.WriteLine("Program Over, Exit.");
+            Employee employee = new Employee();
+            employee.FirstName = "Sample";
+            employee.LastName = "Student";
+            employee.SayName();
+            IQuittable quittable = new Employee();
+            quittable.Quit();
             Console.ReadLine();
+            
+
         }
     }
-
 }
