@@ -1,23 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    namespace interfaceDrill
+namespace Interface
 {
-    /////interface and implement the Quit() method //
-    class Employee : IQuittable
+    class Employee : Person, IQuittable
+
     {
-        void IQuittable.Quit()
+        public override void SayName()
         {
-            Console.WriteLine("you have quit the game");
-        
+            Console.WriteLine($"Name: [{FirstName} {LastName}]");
         }
 
+        public void Quit()
+        {
+            Console.WriteLine("Program Over, Exit.");
+            Console.ReadLine();
+        }
     }
+
 }
-
-
 
     
