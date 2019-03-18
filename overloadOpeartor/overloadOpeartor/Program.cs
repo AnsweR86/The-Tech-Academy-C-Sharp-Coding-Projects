@@ -10,7 +10,7 @@ namespace interfaceDrill
    class Program : Employee
     {
         static void Main(string[] args)
-        {////  //INTERFACE IQuittable//
+        {//////INTERFACE IQuittable//
             IQuittable quitExecute = new Employee();
             quitExecute.Quit();
             Console.ReadLine();
